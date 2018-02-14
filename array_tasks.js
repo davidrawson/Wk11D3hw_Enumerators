@@ -47,11 +47,14 @@ const arrayTasks = {
 			}
 		})
 		return newArray;
-	}
+	},
 
-	// sumOfAllEvenNumbersSquared: function (arr) {
-
-	// }
+	sumOfAllEvenNumbersSquared: function (arr) {
+		let  newArray = arr.filter(function(element){
+			return element %2 === 0;
+		})
+		return this.sum(this.square(newArray));
+ }
 
 	// ----------- EXTENSION ------------
 

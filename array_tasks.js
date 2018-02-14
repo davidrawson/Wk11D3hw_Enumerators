@@ -54,14 +54,23 @@ const arrayTasks = {
 			return element %2 === 0;
 		})
 		return this.sum(this.square(newArray));
- }
+ },
 
 	// ----------- EXTENSION ------------
 
-	// findDuplicates: function (arr) {
-
-	// },
-
+	findDuplicates: function (arr) {
+		let newArray = [];
+		let indexes = [];
+		arr.forEach(function(element){
+			if(indexes.includes(element)===false){
+				indexes = arrayTasks.findIndexesOf(arr, element);
+				if(indexes.length > 1 ){
+					newArray.push(element);
+				}
+			}
+		})
+		return newArray
+	},
 }
 
 module.exports = arrayTasks

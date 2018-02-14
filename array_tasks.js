@@ -31,14 +31,23 @@ const arrayTasks = {
 		return newArray;
 	},
 
+	// findIndexesOf: function (arr, itemToFind) {
+	// 	const newArray = arr.findIndex(function(element){
+	// 		return itemToFind === element;
+	// 	})
+	// 	console.log(newArray);
+	// 	return newArray;
+	// },
+
 	findIndexesOf: function (arr, itemToFind) {
-		// let newArray =[];
-		const newArray = arr.findIndex(function(element){
-			return itemToFind === element;
+		let newArray = [];
+		arr.forEach(function(element, index){
+			if(element === itemToFind){
+				newArray.push(index);
+			}
 		})
-		console.log(newArray);
 		return newArray;
-	},
+	}
 
 	// sumOfAllEvenNumbersSquared: function (arr) {
 

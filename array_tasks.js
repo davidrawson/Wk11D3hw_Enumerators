@@ -58,11 +58,12 @@ const arrayTasks = {
 
 	// ----------- EXTENSION ------------
 
+
 	findDuplicates: function (arr) {
 		let newArray = [];
 		let indexes = [];
 		arr.forEach(function(element){
-			if(indexes.includes(element)===false){
+			if(newArray.includes(element)===false){
 				indexes = arrayTasks.findIndexesOf(arr, element);
 				if(indexes.length > 1 ){
 					newArray.push(element);
